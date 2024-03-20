@@ -6,13 +6,12 @@
 
 To run the api just run:
 
-```cd api
-uvicorn router:app```
+```uvicorn router:app```
 
 To test the api you can deal with the swagger documentation at:  http://localhost:8000/docs
 
 To run the web app:
-```streamlit run streamlit/streamlit.py ```
+```streamlit run streamlit/streamlit.py```
 
 This will open a web page in your default browser at: http://localhost:8501
  
