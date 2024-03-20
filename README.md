@@ -5,6 +5,7 @@
  # Usage
 
 To run the api just run:
+
 ```cd api
 uvicorn router:app```
 
