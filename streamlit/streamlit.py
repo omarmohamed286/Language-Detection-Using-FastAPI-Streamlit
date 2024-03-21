@@ -10,18 +10,13 @@ def main():
 
     st.text_input("Text", key="text")
 
-    if st.button("Detect"):
+    if st.button("Detect"):        
+        text_json = {"text":st.session_state.text}
 
-        if not st.session_state.text.isalpha():
-            st.error("Input should be text")
-        
-        else:
-            text_json = {"text":st.session_state.text}
+        headers = {'Content-Type': 'application/json'}
+        response = requests.post(API_URL, json=text_json)
 
-            headers = {'Content-Type': 'application/json'}
-            response = requests.post(API_URL, json=text_json)
-
-            st.write(f"Language: {response.json().get('language')}")
+        st.write(f"Language: {response.json().get('language')}")
     
 if __name__ == "__main__":
     main()
