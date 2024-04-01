@@ -1,4 +1,4 @@
-# Language-Detection-Using-FastAPI-Streamlit
+# language-detection
 
  This project is a simple web app made using streamlit app that calls fastapi app which serves an ML model trained to detect languages.
 
